@@ -1,73 +1,108 @@
-# React + TypeScript + Vite
+🍵 Chai Culture — Cinematic 3D “Coming Soon” Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium, cinematic 3D landing page for Chai Culture, a luxury Indian chai brand inspired by royal heritage.
+Designed to evoke warmth, elegance, and timeless tradition through motion, lighting, and refined UI.
 
-Currently, two official plugins are available:
+✨ Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+(Insert live demo link here)
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🎯 Project Goal
 
-## Expanding the ESLint configuration
+To create a royal, cinematic, and immersive “Coming Soon” experience that represents:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Indian heritage
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Premium tea culture
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Calm, elegant luxury
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Brand storytelling through motion and light
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The page acts as a digital curtain-raiser for the brand before product launch.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+🧩 Features
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+3D metallic gold logo with soft reflections
+
+Cinematic lighting (volumetric rays, warm palace tones)
+
+Slow ceremonial camera animation
+
+Steam particle effect from teacup
+
+“Launching Soon” animated text
+
+Email subscription form with glassmorphism
+
+Social media icons in royal gold style
+
+Fully responsive (mobile-friendly fallback)
+
+🛠 Tech Stack
+
+Frontend: React
+
+3D: React+Typescript
+
+Styling: Tailwind CSS
+
+Animation: Framer Motion / Native 3D animation
+
+Deployment: Netlify 
+
+
+
+
+🚀 Getting Started
+1. Clone the repository
+git clone https://github.com/Rajyadav999/Chai-Culture.git
+cd chai-culture-coming-soon
+
+2. Install dependencies
+npm install
+
+3. Run locally
+npm run dev
+
+4. Build for production
+npm run build
+
+🎨 Design Philosophy
+
+The design follows a Royal Indian Aesthetic:
+
+Deep espresso and charcoal backgrounds
+
+Muted gold accents (no flashy gradients)
+
+High-contrast serif typography
+
+Slow, graceful motion
+
+Cinematic lighting inspired by palace interiors
+
+The goal is to feel like unveiling a royal seal, not launching a tech startup.
+
+📸 Assets & Credits
+
+Logo: Provided by Chai Culture
+
+3D Environment: Created in Spline / Three.js
+
+Icons: Lucide / Custom SVG
+
+Fonts: Playfair Display + Inter (example)
+
+📬 Contact
+
+Developed by: Raj Yadav
+Role: Frontend Developer
+Email: ryadav.tech17@gmail.com
+
+LinkedIn: www.linkedin.com/in/raj-yadav-706b60397
+
+📄 License
+
+This project is created for internship evaluation and portfolio use
