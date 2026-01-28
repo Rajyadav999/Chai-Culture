@@ -5,9 +5,9 @@ import {
   Environment,
   Sparkles,
 } from '@react-three/drei';
-import * as THREE from 'three';
+import * as THREE from 'three';  
 import { TextureLoader } from 'three';
-import logoTexture from '@/assets/chai-culture-logo.png';
+const logoTexture = new URL("../../assets/chai-culture-logo.png", import.meta.url).href;
 
 function LogoMedallion() {
   const groupRef = useRef<THREE.Group>(null);
