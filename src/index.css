@@ -1,0 +1,302 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap');
+
+/* Chai Culture Luxury Design System
+   Royal Indian heritage, warm luxury, calm confidence, timeless elegance
+   All colors in HSL format
+*/
+
+@layer base {
+  :root {
+    /* Core palette - Deep espresso and charcoal */
+    --background: 20 25% 7%;
+    --foreground: 40 30% 92%;
+
+    /* Card surfaces - slightly elevated from background */
+    --card: 20 20% 10%;
+    --card-foreground: 40 30% 92%;
+
+    /* Popover/overlays */
+    --popover: 20 20% 12%;
+    --popover-foreground: 40 30% 92%;
+
+    /* Primary - Muted Royal Gold */
+    --primary: 42 45% 60%;
+    --primary-foreground: 20 25% 7%;
+
+    /* Secondary - Warm Ivory Cream */
+    --secondary: 40 40% 95%;
+    --secondary-foreground: 20 25% 10%;
+
+    /* Muted tones */
+    --muted: 20 15% 18%;
+    --muted-foreground: 40 15% 55%;
+
+    /* Accent - Warm tungsten glow */
+    --accent: 35 60% 50%;
+    --accent-foreground: 20 25% 7%;
+
+    /* Destructive (kept for UI consistency) */
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 40 30% 92%;
+
+    /* Borders and inputs */
+    --border: 35 20% 20%;
+    --input: 35 20% 15%;
+    --ring: 42 45% 60%;
+
+    --radius: 0.5rem;
+
+    /* Custom luxury tokens */
+    --gold: 42 45% 60%;
+    --gold-light: 42 50% 75%;
+    --gold-dark: 38 40% 45%;
+    --gold-glow: 42 60% 50%;
+    
+    --espresso: 20 25% 7%;
+    --espresso-light: 20 20% 12%;
+    --charcoal: 20 15% 5%;
+    
+    --ivory: 40 40% 95%;
+    --cream: 38 35% 88%;
+    
+    --tungsten: 35 60% 50%;
+    --amber-glow: 30 70% 45%;
+
+    /* Gradients as CSS custom properties */
+    --gradient-gold: linear-gradient(135deg, hsl(42 45% 60%), hsl(38 50% 70%), hsl(42 45% 60%));
+    --gradient-gold-shimmer: linear-gradient(90deg, hsl(42 45% 50%), hsl(45 55% 65%), hsl(42 45% 50%));
+    --gradient-dark: linear-gradient(180deg, hsl(20 25% 7%) 0%, hsl(20 15% 3%) 100%);
+    --gradient-radial-glow: radial-gradient(ellipse at center, hsl(35 40% 15% / 0.4) 0%, transparent 70%);
+    --gradient-vignette: radial-gradient(ellipse at center, transparent 40%, hsl(20 25% 3% / 0.8) 100%);
+
+    /* Shadows */
+    --shadow-gold: 0 0 30px hsl(42 45% 50% / 0.3);
+    --shadow-gold-intense: 0 0 60px hsl(42 45% 50% / 0.5);
+    --shadow-ambient: 0 25px 50px -12px hsl(0 0% 0% / 0.5);
+
+    /* Sidebar (kept for component compatibility) */
+    --sidebar-background: 20 20% 10%;
+    --sidebar-foreground: 40 30% 92%;
+    --sidebar-primary: 42 45% 60%;
+    --sidebar-primary-foreground: 20 25% 7%;
+    --sidebar-accent: 35 20% 18%;
+    --sidebar-accent-foreground: 40 30% 92%;
+    --sidebar-border: 35 20% 20%;
+    --sidebar-ring: 42 45% 60%;
+  }
+
+  .dark {
+    /* Same as root - this is a dark-first design */
+    --background: 20 25% 7%;
+    --foreground: 40 30% 92%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+}
+
+@layer components {
+  /* Royal typography styles */
+  .font-display {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .font-body {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  /* Gold text gradient */
+  .text-gold-gradient {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Frosted glass effect */
+  .glass {
+    background: hsl(20 20% 10% / 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid hsl(42 45% 60% / 0.15);
+  }
+
+  .glass-gold {
+    background: hsl(42 45% 60% / 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid hsl(42 45% 60% / 0.2);
+  }
+
+  /* Glowing underline */
+  .glow-underline {
+    position: relative;
+  }
+
+  .glow-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(42 45% 60%), transparent);
+    box-shadow: 0 0 10px hsl(42 45% 60% / 0.5);
+    animation: glow-pulse 3s ease-in-out infinite;
+  }
+
+  /* Volumetric light rays */
+  .light-rays {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150%;
+    height: 100%;
+    background: conic-gradient(
+      from 270deg at 50% 0%,
+      transparent 30%,
+      hsl(35 40% 50% / 0.03) 35%,
+      hsl(35 40% 50% / 0.05) 40%,
+      transparent 45%,
+      transparent 55%,
+      hsl(35 40% 50% / 0.05) 60%,
+      hsl(35 40% 50% / 0.03) 65%,
+      transparent 70%
+    );
+    pointer-events: none;
+  }
+
+  /* Gold focus ring for inputs */
+  .focus-gold:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px hsl(42 45% 60% / 0.4), var(--shadow-gold);
+    border-color: hsl(42 45% 60% / 0.6);
+  }
+
+  /* Social icon style */
+  .social-icon {
+    @apply w-10 h-10 rounded-full flex items-center justify-center transition-all duration-500;
+    border: 1px solid hsl(42 45% 60% / 0.3);
+    color: hsl(42 45% 60%);
+  }
+
+  .social-icon:hover {
+    border-color: hsl(42 45% 60% / 0.8);
+    box-shadow: var(--shadow-gold);
+    transform: translateY(-2px);
+  }
+}
+
+@layer utilities {
+  /* Slow ceremonial animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+
+  @keyframes dust-float {
+    0%, 100% { 
+      transform: translateY(0) translateX(0); 
+      opacity: 0;
+    }
+    10% { opacity: 0.6; }
+    90% { opacity: 0.6; }
+    100% { 
+      transform: translateY(-100vh) translateX(20px); 
+      opacity: 0;
+    }
+  }
+
+  @keyframes steam-rise {
+    0% { 
+      transform: translateY(0) scaleX(1);
+      opacity: 0;
+    }
+    20% { opacity: 0.3; }
+    80% { opacity: 0.1; }
+    100% { 
+      transform: translateY(-40px) scaleX(1.5);
+      opacity: 0;
+    }
+  }
+
+  @keyframes fade-up {
+    0% { 
+      opacity: 0; 
+      transform: translateY(30px);
+    }
+    100% { 
+      opacity: 1; 
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slow-rotate {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-shimmer {
+    background-size: 200% auto;
+    animation: shimmer 8s linear infinite;
+  }
+
+  .animate-dust {
+    animation: dust-float 15s linear infinite;
+  }
+
+  .animate-steam {
+    animation: steam-rise 4s ease-out infinite;
+  }
+
+  .animate-fade-up {
+    animation: fade-up 1.2s ease-out forwards;
+  }
+
+  .animate-slow-rotate {
+    animation: slow-rotate 15s linear infinite;
+  }
+
+  /* Delay utilities for staggered animations */
+  .delay-200 { animation-delay: 200ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-600 { animation-delay: 600ms; }
+  .delay-800 { animation-delay: 800ms; }
+  .delay-1000 { animation-delay: 1000ms; }
+  .delay-1200 { animation-delay: 1200ms; }
+  .delay-1500 { animation-delay: 1500ms; }
+  .delay-2000 { animation-delay: 2000ms; }
+}
