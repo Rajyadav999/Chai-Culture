@@ -4,8 +4,7 @@ A premium, cinematic 3D landing page for Chai Culture, a luxury Indian chai bran
 Designed to evoke warmth, elegance, and timeless tradition through motion, lighting, and refined UI.
 
 ✨ Preview
-
-(Insert live demo link here)
+https://chaiculture-785.netlify.app/
 
 
 🎯 Project Goal
